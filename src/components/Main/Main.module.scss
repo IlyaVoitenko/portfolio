@@ -1,0 +1,15 @@
+@use "../../styles/variables" as *;
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  background-color: $bgPage;
+
+  .containerContent {
+    width: 100%;
+    margin-left: 16rem;
+  }
+  .paragraph {
+    color: $textWhite;
+  }
+}

@@ -1,4 +1,4 @@
-const monthes = [
+export const months = [
   "Jan",
   "Feb",
   "Mar",
@@ -15,21 +15,29 @@ const monthes = [
 export const experiences = [
   {
     id: 1,
-    role: "Senior Frontend Engineer",
-    company: "Cool Company",
+    role: "Frontend Developer",
+    company: "Freelance Front-End Developer",
     period: {
       start: {
-        year: 2000,
+        year: 2018,
         month: 1,
       },
       end: {
-        year: 2024,
-        month: 1,
+        year: 2020,
+        month: 0,
       },
     },
     description:
-      "Build and maintain frontend components with accessibility in mind.",
-    stack: ["React", "TypeScript", "Tailwind"],
+      "I have built responsive, user-friendly web interfaces, created dynamic React components, and customized WordPress sites while ensuring clean, efficient code and a smooth user experience.",
+    stack: [
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind",
+      "WordPress",
+      "CSS",
+      "HTML",
+    ],
   },
   {
     id: 2,

@@ -1,0 +1,73 @@
+@use "../../styles/variables" as *;
+
+.container {
+  padding-left: 1.5rem;
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 50%;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  padding-right: 1.5rem;
+  min-height: 200px;
+
+  .containerContent {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+  }
+  .role {
+    font-size: 20px;
+    font-weight: 600;
+    color: #8d97ac;
+  }
+  .companyPeriod {
+    color: $textContent;
+    width: 150px;
+    max-width: 200px;
+    min-width: 130px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    text-wrap: balance;
+    text-wrap-style: auto;
+    margin-right: 20px;
+  }
+  .description {
+    margin-top: 0.5rem;
+    color: $textContent;
+  }
+  .skillsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+  .skillItem {
+    color: $skillColor;
+    background-color: $skillBg;
+    border-radius: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  &:hover {
+    border-radius: 10px;
+    background-color: $bgHoverExperience;
+    .role {
+      color: $hoverColor;
+    }
+    .companyPeriod {
+      color: $textContentHover;
+    }
+    .description {
+      color: $textContentHover;
+    }
+    .skillItem {
+      color: $hoverColor;
+      background-color: $skillBgHover;
+    }
+  }
+}

@@ -1,11 +1,11 @@
 import { experiences } from "../../data/experience";
 import ExperienceItem from "../ExperienceItem";
+import styles from "./Experience.module.scss";
 const Experience = () => {
-  const isActive = true;
   return (
-    <div className="space-y-10">
+    <div className={styles.container}>
       {experiences.map((item) => (
-        <ExperienceItem key={item.id} item={item} isActive={isActive} />
+        <ExperienceItem key={item.id} item={item} />
       ))}
     </div>
   );

@@ -1,44 +1,39 @@
 import React from "react";
-
+import styles from "./ExperienceItem.module.scss";
+import { months } from "../../data/experience";
 interface ExperienceItemProps {
   item: {
     id: number;
     role: string;
     company: string;
-    period: { start: { year: number }; end: { year: number } };
+    period: {
+      start: { year: number; month: number };
+      end: { year: number; month: number };
+    };
     description: string;
     stack: string[];
   };
-  isActive?: boolean;
 }
-const ExperienceItem = ({ item, isActive }: ExperienceItemProps) => {
+const ExperienceItem = ({ item }: ExperienceItemProps) => {
   return (
-    <div key={item.id} className="border-l border-slate-700 pl-6 relative">
-      <span className="absolute -left-2 top-2 w-4 h-4 rounded-full bg-sky-400"></span>
-      <h3
-        className={`text-xl font-semibold  ${
-          isActive ? "text-[#93d3e9]" : "text-[#8d97ac]"
-        }`}
-      >
-        {item.role}
-      </h3>
-      <p className="text-slate-400">
-        {item.company} · {item.period.start.year}
-      </p>
-      <p className={`mt-2 ${isActive ? "text-[#8d97ac]" : "text-[#485370]"}`}>
-        {item.description}
-      </p>
-      <div className="mt-2 flex gap-2 flex-wrap">
-        {item.stack.map((skill, i) => (
-          <span
-            key={i}
-            className="px-2 py-1 bg-slate-800 rounded text-sm text-slate-300"
-          >
-            {skill}
-          </span>
-        ))}
+    <section className={styles.container}>
+      <span className={styles.companyPeriod}>
+        {months[item.period.start.month]} - {months[item.period.end.month]}{" "}
+        {item.company} ·
+      </span>
+      <div key={item.id} className={styles.containerContent}>
+        <h3 className={styles.role}>{item.role}</h3>
+
+        <p className={`${styles.description}`}>{item.description}</p>
+        <div className={styles.skillsList}>
+          {item.stack.map((skill, i) => (
+            <span key={i} className={styles.skillItem}>
+              {skill}
+            </span>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
