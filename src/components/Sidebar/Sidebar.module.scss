@@ -37,6 +37,20 @@
       }
     }
   }
+
+  .navLinkActive {
+    display: block;
+    color: $textWhite;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    margin-left: 1rem;
+    transition: background-color 0.3s;
+
+    &:hover {
+      color: $textContentHover;
+    }
+  }
+
   .networkLinks {
     display: flex;
     gap: 1rem;

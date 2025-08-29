@@ -5,23 +5,30 @@ import instagramIcon from "../../assets/icons8-instagram.svg";
 import linkedin from "../../assets/icons8-linkedin.svg";
 import Image from "next/image";
 import styles from "./Sidebar.module.scss";
+import { withActiveSection } from "@/hook/withActiveSection";
+import { sideBarConfig } from "@/hook/useActiveSection";
+const sections = ["about", "experience", "projects"];
 
-const Sidebar = () => {
+const Sidebar = ({ activeSection }: { activeSection: string }) => {
   return (
     <aside className={styles.container}>
       <div>
         <h1 className={styles.userName}>Your Name</h1>
         <p className={styles.roleUser}>Front End Engineer</p>
         <nav className={styles.navLinks}>
-          <Link href="#about" className={styles.navLink}>
-            About
-          </Link>
-          <a href="#experience" className={styles.navLink}>
-            Experience
-          </a>
-          <a href="#projects" className={styles.navLink}>
-            Projects
-          </a>
+          {sections.map((section) => (
+            <Link
+              key={section}
+              href={`#${section}`}
+              className={`${
+                activeSection === section
+                  ? styles.navLinkActive
+                  : styles.navLink
+              }`}
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </Link>
+          ))}
         </nav>
       </div>
       <div className={styles.networkLinks}>
@@ -45,4 +52,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default withActiveSection(Sidebar, sections, sideBarConfig);
