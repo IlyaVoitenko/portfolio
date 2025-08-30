@@ -7,6 +7,7 @@ import Image from "next/image";
 import styles from "./Sidebar.module.scss";
 import { withActiveSection } from "@/hook/withActiveSection";
 import { sideBarConfig } from "@/hook/useActiveSection";
+import React from "react";
 const sections = ["about", "experience", "projects"];
 
 const Sidebar = ({ activeSection }: { activeSection: string }) => {
@@ -17,17 +18,25 @@ const Sidebar = ({ activeSection }: { activeSection: string }) => {
         <p className={styles.roleUser}>Front End Engineer</p>
         <nav className={styles.navLinks}>
           {sections.map((section) => (
-            <Link
-              key={section}
-              href={`#${section}`}
-              className={`${
-                activeSection === section
-                  ? styles.navLinkActive
-                  : styles.navLink
-              }`}
-            >
-              {section.charAt(0).toUpperCase() + section.slice(1)}
-            </Link>
+            <div key={section} className={styles.navItem}>
+              <hr
+                className={
+                  activeSection === section
+                    ? styles.dividerActive
+                    : styles.divider
+                }
+              />
+              <Link
+                href={`#${section}`}
+                className={`${
+                  activeSection === section
+                    ? styles.navLinkActive
+                    : styles.navLink
+                }`}
+              >
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+              </Link>
+            </div>
           ))}
         </nav>
       </div>
