@@ -13,9 +13,12 @@ const sections = ["about", "experience", "projects"];
 const Sidebar = ({ activeSection }: { activeSection: string }) => {
   return (
     <aside className={styles.container}>
-      <div>
-        <h1 className={styles.userName}>Your Name</h1>
+      <div className={styles.userInfo}>
+        <h1 className={styles.userName}>Illia Voitenko</h1>
         <p className={styles.roleUser}>Front End Engineer</p>
+        <p className={styles.description}>
+          Writing clean, reusable & secure code
+        </p>
         <nav className={styles.navLinks}>
           {sections.map((section) => (
             <div key={section} className={styles.navItem}>

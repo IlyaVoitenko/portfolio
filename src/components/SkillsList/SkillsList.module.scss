@@ -1,0 +1,21 @@
+@use "../../styles/abstracts/variables" as *;
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  .skillItem {
+    color: var(--skill-color);
+    background-color: var(--skill-bg);
+    border-radius: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &:hover {
+      color: $hoverColor;
+      background-color: $skillBgHover;
+    }
+  }
+}

@@ -1,74 +1,97 @@
-@use "../../styles/variables" as *;
+@use "../../styles/abstracts/variables" as *;
 .container {
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 16rem;
-  padding: 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  .userName {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: $textWhite;
-  }
-  .roleUser {
-    margin-top: 0.5rem;
-    color: $textWhite;
-  }
+  .userInfo {
+    padding-top: 1.5rem;
+    .userName {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $textWhite;
+    }
+    .roleUser {
+      margin-top: 0.5rem;
+      color: $textWhite;
+    }
 
-  .navLinks {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-
-    .navItem {
+    .description {
+      margin-top: 0.5rem;
+      color: $textColor;
+    }
+    .navLinks {
+      margin-top: 2rem;
       display: flex;
-      align-items: center;
-      gap: 10px;
+      flex-direction: column;
+      gap: 1rem;
 
-      .divider {
-        height: 2px;
-        width: 25px;
-        background-color: $textColor;
+      .navItem {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &:hover {
+          .dividerActive {
+            height: 2px;
+            width: 35px;
+            background-color: $textWhite;
+            border: none;
+          }
+          .divider {
+            height: 2px;
+            width: 35px;
+            background-color: $textWhite;
+            border: none;
+          }
+          .navLink {
+            color: $textWhite;
+          }
+        }
+        .divider {
+          height: 2px;
+          width: 25px;
+          background-color: $textColor;
+          border: none;
+        }
+        .dividerActive {
+          height: 2px;
+          width: 35px;
+          background-color: $textWhite;
+          border: none;
+        }
+        .navLink {
+          display: block;
+          color: $textColor;
+          padding: 0.5rem 1rem;
+          border-radius: 0.5rem;
+          transition: background-color 0.3s;
+        }
       }
-      .dividerActive {
-        height: 2px;
-        width: 35px;
-        background-color: $textWhite;
-      }
-      .navLink {
+
+      .navLinkActive {
         display: block;
-        color: $textColor;
+        color: $textWhite;
         padding: 0.5rem 1rem;
         border-radius: 0.5rem;
-        transition: background-color 0.3s;
+        margin-left: 0.1rem;
 
         &:hover {
           color: $textContentHover;
         }
       }
     }
-
-    .navLinkActive {
-      display: block;
-      color: $textWhite;
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      margin-left: 0.1rem;
-      transition: background-color 0.3s;
-
-      &:hover {
-        color: $textContentHover;
-      }
-    }
   }
 
   .networkLinks {
+    padding-bottom: 1.5rem;
     display: flex;
     gap: 1rem;
   }

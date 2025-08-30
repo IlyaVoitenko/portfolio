@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./ExperienceItem.module.scss";
 import { months } from "../../data/experience";
+import SkillsList from "../SkillsList";
 interface ExperienceItemProps {
   item: {
     id: number;
@@ -18,20 +19,16 @@ const ExperienceItem = ({ item }: ExperienceItemProps) => {
   return (
     <section className={styles.container}>
       <span className={styles.companyPeriod}>
-        {months[item.period.start.month]} - {months[item.period.end.month]}{" "}
-        {item.company} ·
+        {months[item.period.start.month]} {item.period.start.year} - <br />
+        {months[item.period.end.month]} {item.period.end.year}
       </span>
       <div key={item.id} className={styles.containerContent}>
-        <h3 className={styles.role}>{item.role}</h3>
+        <h3 className={styles.role}>
+          {item.role} | {item.company}
+        </h3>
 
         <p className={`${styles.description}`}>{item.description}</p>
-        <div className={styles.skillsList}>
-          {item.stack.map((skill, i) => (
-            <span key={i} className={styles.skillItem}>
-              {skill}
-            </span>
-          ))}
-        </div>
+        <SkillsList skills={item.stack} />
       </div>
     </section>
   );

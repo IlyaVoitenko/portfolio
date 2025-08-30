@@ -1,0 +1,16 @@
+@use "../styles/abstracts/variables" as *;
+:root {
+  --font-roboto: "--font-roboto";
+  --skill-bg: #{$skillBg};
+  --skill-color: #{$skillColor};
+}
+body {
+  background-color: $bgPage;
+}
+* {
+  margin: 0;
+  font-family: var(--font-roboto);
+}
+a {
+  text-decoration: none;
+}

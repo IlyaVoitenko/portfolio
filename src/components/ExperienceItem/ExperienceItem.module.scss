@@ -1,5 +1,5 @@
-@use "../../styles/variables" as *;
-
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/mixins" as *;
 .container {
   padding-left: 1.5rem;
   position: relative;
@@ -33,27 +33,16 @@
     text-wrap: balance;
     text-wrap-style: auto;
     margin-right: 20px;
+    line-height: 25px;
   }
   .description {
     margin-top: 0.5rem;
     color: $textContent;
   }
-  .skillsList {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-    margin-top: 1rem;
-  }
-  .skillItem {
-    color: $skillColor;
-    background-color: $skillBg;
-    border-radius: 10px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+
   &:hover {
+    --skill-bg: #{$skillBgHover};
+    --skill-color: #{$hoverColor};
     border-radius: 10px;
     background-color: $bgHoverExperience;
     .role {
@@ -64,10 +53,6 @@
     }
     .description {
       color: $textContentHover;
-    }
-    .skillItem {
-      color: $hoverColor;
-      background-color: $skillBgHover;
     }
   }
 }

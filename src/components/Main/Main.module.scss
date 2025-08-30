@@ -1,4 +1,4 @@
-@use "../../styles/variables" as *;
+@use "../../styles/abstracts/variables" as *;
 
 .container {
   display: flex;
@@ -11,5 +11,6 @@
   }
   .paragraph {
     color: $textWhite;
+    line-height: 30px;
   }
 }

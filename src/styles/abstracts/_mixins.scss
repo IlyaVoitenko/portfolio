@@ -1,0 +1,9 @@
+@use "../../styles/abstracts/variables" as *;
+@use "../../components/SkillsList/SkillsList.module.scss" as skills;
+
+@mixin hoverSkill {
+  .#{skills.$skillItem} {
+    color: $hoverColor;
+    background-color: $skillBgHover;
+  }
+}
