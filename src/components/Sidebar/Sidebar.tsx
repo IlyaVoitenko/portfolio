@@ -45,19 +45,23 @@ const Sidebar = ({ activeSection }: { activeSection: string }) => {
       </div>
       <div className={styles.networkLinks}>
         <Link href="https://github.com/IlyaVoitenko" target="_blank">
-          <Image src={gitIcon} alt="GitHub" width={24} height={24} />
+          <Image src={gitIcon} alt="GitHub" className={styles.networkIcon} />
         </Link>
         <Link
           href="https://www.linkedin.com/in/illia-voitenko-71a1bb1b3/"
           target="_blank"
         >
-          <Image src={linkedin} alt="LinkedIn" width={24} height={24} />
+          <Image src={linkedin} alt="LinkedIn" className={styles.networkIcon} />
         </Link>
         <Link
           href="https://www.instagram.com/illia_voit?igsh=Yzh3YjdqZTF6bXU1&utm_source=qr"
           target="_blank"
         >
-          <Image src={instagramIcon} alt="Instagram" width={24} height={24} />
+          <Image
+            src={instagramIcon}
+            alt="Instagram"
+            className={styles.networkIcon}
+          />
         </Link>
       </div>
     </aside>

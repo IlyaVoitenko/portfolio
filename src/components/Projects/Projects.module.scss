@@ -1,0 +1,78 @@
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/mixins" as *;
+
+.projectList {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  flex-direction: column;
+  height: 700px;
+
+  @include Mobile {
+    align-items: center;
+    height: 900px;
+  }
+
+  .projectItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1200px;
+    width: 700px;
+    min-width: 250px;
+
+    @include Mobile {
+      width: 260px;
+      flex-direction: column;
+    }
+    @include LaptopL {
+      width: 900px;
+    }
+    .projectImage {
+      border-radius: 5px;
+
+      @include LaptopL {
+        width: 239px;
+        height: 150px;
+      }
+    }
+    .projectContent {
+      display: flex;
+      flex-direction: column;
+      max-width: 900px;
+      width: initial;
+      min-width: 100px;
+      .projectTitle {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $textWhite;
+        @include LaptopL {
+          font-size: 31px;
+          line-height: 37px;
+        }
+      }
+      .projectDescription {
+        font-size: 1rem;
+        color: $textColor;
+        margin-top: 10px;
+        width: fit-content;
+        @include LaptopL {
+          font-size: 24px;
+          line-height: 37px;
+        }
+      }
+      .projectLink {
+        font-size: 1rem;
+        color: $textWhite;
+        margin-top: 10px;
+        text-decoration: underline;
+      }
+      .projectStack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        list-style-type: none;
+      }
+    }
+  }
+}

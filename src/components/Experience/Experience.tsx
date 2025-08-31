@@ -1,4 +1,4 @@
-import { experiences } from "../../data/experience";
+import { experiences } from "../../data/experience.data";
 import ExperienceItem from "../ExperienceItem";
 import styles from "./Experience.module.scss";
 const Experience = () => {

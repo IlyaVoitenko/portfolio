@@ -13,6 +13,20 @@
   padding-right: 1.5rem;
   min-height: 200px;
 
+  @include Mobile {
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  @include Tablet {
+    width: 75%;
+  }
+  @include Laptop {
+    width: 75%;
+  }
+  @include LaptopL {
+    width: 65%;
+  }
   .containerContent {
     display: flex;
     flex-direction: column;
@@ -22,22 +36,39 @@
     font-size: 20px;
     font-weight: 600;
     color: #8d97ac;
+
+    @include LaptopL {
+      font-size: 31px;
+      line-height: 37px;
+    }
   }
   .companyPeriod {
     color: $textContent;
     width: 150px;
     max-width: 200px;
-    min-width: 130px;
+    min-width: 80px;
     overflow-wrap: break-word;
     word-break: break-word;
     text-wrap: balance;
     text-wrap-style: auto;
     margin-right: 20px;
     line-height: 25px;
+
+    @include Mobile {
+      margin-right: 0;
+    }
+    @include LaptopL {
+      font-size: 24px;
+      line-height: 37px;
+    }
   }
   .description {
     margin-top: 0.5rem;
     color: $textContent;
+    @include LaptopL {
+      font-size: 24px;
+      line-height: 37px;
+    }
   }
 
   &:hover {

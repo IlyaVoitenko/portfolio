@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./ExperienceItem.module.scss";
-import { months } from "../../data/experience";
+import { months } from "../../data/experience.data";
 import SkillsList from "../SkillsList";
 interface ExperienceItemProps {
   item: {

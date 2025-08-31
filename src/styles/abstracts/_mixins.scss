@@ -1,9 +1,22 @@
 @use "../../styles/abstracts/variables" as *;
-@use "../../components/SkillsList/SkillsList.module.scss" as skills;
 
-@mixin hoverSkill {
-  .#{skills.$skillItem} {
-    color: $hoverColor;
-    background-color: $skillBgHover;
+@mixin Mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+@mixin Tablet {
+  @media (min-width: 768px) and (max-width: 1023px) {
+    @content;
+  }
+}
+@mixin Laptop {
+  @media (min-width: 1024px) and (max-width: 1439px) {
+    @content;
+  }
+}
+@mixin LaptopL {
+  @media (min-width: 1440px) and (max-width: 2559px) {
+    @content;
   }
 }

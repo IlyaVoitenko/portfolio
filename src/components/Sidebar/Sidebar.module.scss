@@ -1,4 +1,5 @@
 @use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/mixins" as *;
 .container {
   position: fixed;
   top: 0;
@@ -10,22 +11,41 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
+  @include Mobile {
+    display: none;
+  }
+  @include Laptop {
+    width: 15rem;
+  }
+  @include LaptopL {
+    width: 19rem;
+  }
   .userInfo {
     padding-top: 1.5rem;
     .userName {
       font-size: 1.5rem;
       font-weight: bold;
       color: $textWhite;
+      @include LaptopL {
+        font-size: 2.5rem;
+      }
     }
     .roleUser {
       margin-top: 0.5rem;
       color: $textWhite;
+
+      @include LaptopL {
+        font-size: 1.3rem;
+      }
     }
 
     .description {
       margin-top: 0.5rem;
       color: $textColor;
+
+      @include LaptopL {
+        font-size: 1.3rem;
+      }
     }
     .navLinks {
       margin-top: 2rem;
@@ -60,12 +80,18 @@
           width: 25px;
           background-color: $textColor;
           border: none;
+          @include LaptopL {
+            width: 40px;
+          }
         }
         .dividerActive {
           height: 2px;
           width: 35px;
           background-color: $textWhite;
           border: none;
+          @include LaptopL {
+            width: 55px;
+          }
         }
         .navLink {
           display: block;
@@ -73,6 +99,9 @@
           padding: 0.5rem 1rem;
           border-radius: 0.5rem;
           transition: background-color 0.3s;
+          @include LaptopL {
+            font-size: 1.2rem;
+          }
         }
       }
 
@@ -83,6 +112,9 @@
         border-radius: 0.5rem;
         margin-left: 0.1rem;
 
+        @include LaptopL {
+          font-size: 1.3rem;
+        }
         &:hover {
           color: $textContentHover;
         }
@@ -94,5 +126,24 @@
     padding-bottom: 1.5rem;
     display: flex;
     gap: 1rem;
+
+    @include Tablet {
+      gap: 1.5rem;
+    }
+    @include Laptop {
+      gap: 2rem;
+    }
+    @include LaptopL {
+      gap: 3rem;
+    }
+    .networkIcon {
+      width: 24px;
+      height: 24px;
+
+      @include LaptopL {
+        width: 28px;
+        height: 28px;
+      }
+    }
   }
 }

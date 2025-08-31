@@ -1,16 +1,42 @@
 @use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/mixins" as *;
 
 .container {
   display: flex;
   min-height: 100vh;
   background-color: $bgPage;
-
+  @include Mobile {
+    flex-direction: column;
+  }
   .containerContent {
     width: 100%;
     margin-left: 16rem;
+    @include Mobile {
+      margin-left: 0;
+    }
+    @include Laptop {
+      margin-left: 17rem;
+    }
+    @include LaptopL {
+      margin-left: 21rem;
+    }
   }
   .paragraph {
     color: $textWhite;
     line-height: 30px;
+
+    @include LaptopL {
+      font-size: 24px;
+      line-height: 37px;
+    }
+  }
+  .networkLinks {
+    display: none;
+    @include Mobile {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding-block: 1rem;
+    }
   }
 }
