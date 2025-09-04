@@ -28,7 +28,7 @@
       flex-direction: column;
     }
     @include LaptopL {
-      width: 900px;
+      width: 700px;
     }
     @include Desktop {
       width: 1000px;
@@ -37,8 +37,8 @@
       border-radius: 5px;
 
       @include LaptopL {
-        width: 239px;
-        height: 150px;
+        width: 200px;
+        height: 125px;
       }
       @include Desktop {
         width: 300px;

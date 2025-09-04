@@ -53,7 +53,7 @@
       color: $textColor;
 
       @include LaptopL {
-        font-size: 1.3rem;
+        font-size: 1rem;
       }
       @include Desktop {
         font-size: 1.6rem;
@@ -93,7 +93,7 @@
           background-color: $textColor;
           border: none;
           @include LaptopL {
-            width: 40px;
+            width: 35px;
           }
           @include Desktop {
             width: 45px;
@@ -105,7 +105,7 @@
           background-color: $textWhite;
           border: none;
           @include LaptopL {
-            width: 55px;
+            width: 45px;
           }
           @include Desktop {
             width: 60px;
@@ -118,7 +118,7 @@
           border-radius: 0.5rem;
           transition: background-color 0.3s;
           @include LaptopL {
-            font-size: 1.2rem;
+            font-size: 1rem;
           }
           @include Desktop {
             font-size: 1.5rem;
@@ -134,7 +134,7 @@
         margin-left: 0.1rem;
 
         @include LaptopL {
-          font-size: 1.3rem;
+          font-size: 1.2rem;
         }
         @include Desktop {
           font-size: 1.5rem;

@@ -38,7 +38,7 @@
     color: #8d97ac;
 
     @include LaptopL {
-      font-size: 31px;
+      font-size: 25px;
       line-height: 37px;
     }
     @include Desktop {
@@ -62,8 +62,8 @@
       margin-right: 0;
     }
     @include LaptopL {
-      font-size: 24px;
-      line-height: 37px;
+      font-size: 20px;
+      line-height: 31px;
     }
     @include Desktop {
       font-size: 1.6rem;
@@ -74,7 +74,7 @@
     margin-top: 0.5rem;
     color: $textContent;
     @include LaptopL {
-      font-size: 24px;
+      font-size: 20px;
       line-height: 37px;
     }
     @include Desktop {
