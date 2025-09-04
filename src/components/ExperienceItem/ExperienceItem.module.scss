@@ -41,6 +41,10 @@
       font-size: 31px;
       line-height: 37px;
     }
+    @include Desktop {
+      font-size: 40px;
+      line-height: 42px;
+    }
   }
   .companyPeriod {
     color: $textContent;
@@ -61,6 +65,10 @@
       font-size: 24px;
       line-height: 37px;
     }
+    @include Desktop {
+      font-size: 1.6rem;
+      line-height: 35px;
+    }
   }
   .description {
     margin-top: 0.5rem;
@@ -68,6 +76,10 @@
     @include LaptopL {
       font-size: 24px;
       line-height: 37px;
+    }
+    @include Desktop {
+      font-size: 2rem;
+      line-height: 42px;
     }
   }
 

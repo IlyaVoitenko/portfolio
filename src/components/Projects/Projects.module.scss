@@ -12,7 +12,9 @@
     align-items: center;
     height: 900px;
   }
-
+  @include Desktop {
+    height: 1000px;
+  }
   .projectItem {
     display: flex;
     align-items: flex-start;
@@ -28,12 +30,20 @@
     @include LaptopL {
       width: 900px;
     }
+    @include Desktop {
+      width: 1000px;
+    }
     .projectImage {
       border-radius: 5px;
 
       @include LaptopL {
         width: 239px;
         height: 150px;
+      }
+      @include Desktop {
+        width: 300px;
+        height: 200px;
+        border-radius: 15px;
       }
     }
     .projectContent {
@@ -50,6 +60,10 @@
           font-size: 31px;
           line-height: 37px;
         }
+        @include Desktop {
+          font-size: 40px;
+          line-height: 42px;
+        }
       }
       .projectDescription {
         font-size: 1rem;
@@ -59,6 +73,10 @@
         @include LaptopL {
           font-size: 24px;
           line-height: 37px;
+        }
+        @include Desktop {
+          font-size: 1.6rem;
+          line-height: 35px;
         }
       }
       .projectLink {

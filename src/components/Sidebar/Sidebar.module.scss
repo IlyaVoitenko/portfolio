@@ -20,6 +20,9 @@
   @include LaptopL {
     width: 19rem;
   }
+  @include Desktop {
+    width: 21rem;
+  }
   .userInfo {
     padding-top: 1.5rem;
     .userName {
@@ -29,6 +32,9 @@
       @include LaptopL {
         font-size: 2.5rem;
       }
+      @include Desktop {
+        font-size: 3.5rem;
+      }
     }
     .roleUser {
       margin-top: 0.5rem;
@@ -36,6 +42,9 @@
 
       @include LaptopL {
         font-size: 1.3rem;
+      }
+      @include Desktop {
+        font-size: 1.8rem;
       }
     }
 
@@ -45,6 +54,9 @@
 
       @include LaptopL {
         font-size: 1.3rem;
+      }
+      @include Desktop {
+        font-size: 1.6rem;
       }
     }
     .navLinks {
@@ -83,6 +95,9 @@
           @include LaptopL {
             width: 40px;
           }
+          @include Desktop {
+            width: 45px;
+          }
         }
         .dividerActive {
           height: 2px;
@@ -91,6 +106,9 @@
           border: none;
           @include LaptopL {
             width: 55px;
+          }
+          @include Desktop {
+            width: 60px;
           }
         }
         .navLink {
@@ -101,6 +119,9 @@
           transition: background-color 0.3s;
           @include LaptopL {
             font-size: 1.2rem;
+          }
+          @include Desktop {
+            font-size: 1.5rem;
           }
         }
       }
@@ -114,6 +135,9 @@
 
         @include LaptopL {
           font-size: 1.3rem;
+        }
+        @include Desktop {
+          font-size: 1.5rem;
         }
         &:hover {
           color: $textContentHover;
@@ -136,6 +160,9 @@
     @include LaptopL {
       gap: 3rem;
     }
+    @include Desktop {
+      gap: 4rem;
+    }
     .networkIcon {
       width: 24px;
       height: 24px;
@@ -143,6 +170,10 @@
       @include LaptopL {
         width: 28px;
         height: 28px;
+      }
+      @include Desktop {
+        width: 50px;
+        height: 50px;
       }
     }
   }

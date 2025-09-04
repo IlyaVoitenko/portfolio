@@ -25,5 +25,12 @@
       padding-left: 13px;
       padding-right: 13px;
     }
+    @include Desktop {
+      font-size: 24px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 }
