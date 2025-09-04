@@ -4,9 +4,9 @@ import styles from "./Experience.module.scss";
 const Experience = () => {
   return (
     <div className={styles.container}>
-      {experiences.map((item) => (
-        <ExperienceItem key={item.id} item={item} />
-      ))}
+      {experiences
+        .map((item) => <ExperienceItem key={item.id} item={item} />)
+        .reverse()}
     </div>
   );
 };

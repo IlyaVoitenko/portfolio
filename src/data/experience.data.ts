@@ -16,7 +16,7 @@ export const experiences = [
   {
     id: 1,
     role: "Frontend Developer",
-    company: "Freelance ",
+    company: "Kiev Dev Labs",
     period: {
       start: {
         year: 2018,
@@ -28,7 +28,7 @@ export const experiences = [
       },
     },
     description:
-      "I have built responsive, user-friendly web interfaces, created dynamic React components, and customized WordPress sites while ensuring clean, efficient code and a smooth user experience.",
+      "For two years, I worked at a Kiev-based company specializing in payment solutions. I was responsible for developing and maintaining web applications, integrating payment systems, optimizing transaction processing, and implementing features for secure online payments. I also contributed to system architecture design, UX improvements, and performance optimization of the services.",
     stack: [
       "React",
       "TypeScript",
