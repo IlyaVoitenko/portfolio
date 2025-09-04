@@ -1,19 +1,19 @@
 "use client";
-import { motion, useAnimation, useInView } from "motion/react";
+import { motion, useAnimation, useInView, Variants } from "motion/react";
 import React, { useEffect, useRef } from "react";
 
 interface AnimationProps {
   children: React.ReactNode;
-  variants?: object; // кастомные анимации
+  variants?: Variants;
   duration?: number;
   delay?: number;
-  once?: boolean; // проигрывать один раз или каждый раз
+  once?: boolean;
 }
 
-const defaultVariants = {
+const defaultVariants: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -40 }, // например, исчезание вверх
+  exit: { opacity: 0, y: -40 },
 };
 
 const Animation = ({
@@ -31,14 +31,14 @@ const Animation = ({
     if (isView) {
       controls.start("visible");
     } else {
-      controls.start("hidden"); // если хочешь, чтобы исчезало при скролле
+      controls.start("hidden");
     }
   }, [isView, controls]);
 
   return (
     <motion.div
       ref={ref}
-      variants={variants || defaultVariants}
+      variants={variants}
       initial="hidden"
       animate={controls}
       exit="exit"
