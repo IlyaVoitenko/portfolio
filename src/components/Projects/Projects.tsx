@@ -15,6 +15,7 @@ const Projects = () => {
               width={200}
               height={100}
               className={styles.projectImage}
+              loading="lazy"
             />
             <div className={styles.projectContent}>
               <Link
