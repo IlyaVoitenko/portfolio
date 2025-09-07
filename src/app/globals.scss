@@ -14,3 +14,11 @@ body {
 a {
   text-decoration: none;
 }
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $bgPage;
+  color: $textWhite;
+}
