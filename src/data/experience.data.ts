@@ -1,3 +1,4 @@
+import { nanoid } from "nanoid";
 export const months = [
   "Jan",
   "Feb",
@@ -14,21 +15,21 @@ export const months = [
 ];
 export const experiences = [
   {
-    id: 1,
+    id: nanoid(),
     role: "Frontend Developer",
-    company: "Kiev Dev Labs",
+    company: "Transactions Project | Freelance",
     period: {
       start: {
-        year: 2018,
+        year: 2021,
         month: 1,
       },
       end: {
-        year: 2020,
-        month: 0,
+        year: 2021,
+        month: 2,
       },
     },
     description:
-      "For two years, I worked at a Kiev-based company specializing in payment solutions. I was responsible for developing and maintaining web applications, integrating payment systems, optimizing transaction processing, and implementing features for secure online payments. I also contributed to system architecture design, UX improvements, and performance optimization of the services.",
+      "Developed a React-based project enabling secure transactions between the USA and Ukraine. Collaborated closely with Product Managers (PMs), backend developers, and designers to ensure seamless integration, efficient workflows, and an optimal user experience. ",
     stack: [
       "React",
       "TypeScript",
@@ -37,16 +38,48 @@ export const experiences = [
       "WordPress",
       "CSS",
       "HTML",
+      "Git",
+      "Figma",
+      "Node.js",
     ],
   },
   {
-    id: 2,
+    id: nanoid(),
+    role: "Frontend Developer",
+    company: "Language courses | Freelance",
+    period: {
+      start: {
+        year: 2022,
+        month: 6,
+      },
+      end: {
+        year: 2022,
+        month: 9,
+      },
+    },
+    description:
+      "Developed a responsive website for language courses using React, ensuring an engaging user experience across devices. Collaborated with designers to implement a clean, intuitive interface and integrated essential features such as course listings, enrollment forms, and contact options.",
+    stack: [
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind",
+      "WordPress",
+      "CSS",
+      "HTML",
+      "Git",
+      "Figma",
+      "Node.js",
+    ],
+  },
+  {
+    id: nanoid(),
     role: "Frontend Developer",
     company: "Package Mechanics Company",
     period: {
       start: {
         year: 2020,
-        month: 2,
+        month: 6,
       },
       end: {
         year: 2023,
@@ -55,6 +88,6 @@ export const experiences = [
     },
     description:
       " I have built responsive, user-friendly web interfaces, implemented web security best practices, created dynamic React components, and customized WordPress sites, ensuring clean, efficient code and a smooth user experience.",
-    stack: ["Next.js", "SCSS", "Node.js"],
+    stack: ["Next.js", "SCSS", "Node.js", "TypeScript", "React", "AWS"],
   },
 ];

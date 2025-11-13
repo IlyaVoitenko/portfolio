@@ -4,7 +4,7 @@ import { months } from "../../data/experience.data";
 import SkillsList from "../SkillsList";
 interface ExperienceItemProps {
   item: {
-    id: number;
+    id: number | string;
     role: string;
     company: string;
     period: {

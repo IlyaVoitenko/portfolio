@@ -1,10 +1,10 @@
 import diveSea from "../assets/diveSea.png";
-import transaction from "../assets/transactions.png";
 import mobileStore from "../assets/mobileStore.png";
+import { nanoid } from "nanoid";
 
 export const projects = [
   {
-    id: 1,
+    id: nanoid(),
     title: "DiveSea",
     description:
       "A personal portfolio website to showcase my projects and skills.",
@@ -13,21 +13,12 @@ export const projects = [
     stack: ["React", "TypeScript", "SCSS"],
   },
   {
-    id: 2,
+    id: nanoid(),
     title: "Mobile Store",
     description:
       "An e-commerce mobile application for buying and selling products.",
     link: "https://mobile-store-gold.vercel.app/",
     image: mobileStore,
-    stack: ["React Native", "TypeScript", "Firebase"],
-  },
-  {
-    id: 3,
-    title: "Transactions App",
-    description:
-      "A web application for managing and tracking financial transactions.",
-    link: "https://list-transaction-frontend.vercel.app/",
-    image: transaction,
-    stack: ["React", "TypeScript", "Node.js"],
+    stack: ["React ", "TypeScript", "Firebase", "SCSS"],
   },
 ];
