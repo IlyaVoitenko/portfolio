@@ -43,35 +43,7 @@ export const experiences = [
       "Node.js",
     ],
   },
-  {
-    id: nanoid(),
-    role: "Frontend Developer",
-    company: "Language courses | Freelance",
-    period: {
-      start: {
-        year: 2022,
-        month: 6,
-      },
-      end: {
-        year: 2022,
-        month: 9,
-      },
-    },
-    description:
-      "Developed a responsive website for language courses using React, ensuring an engaging user experience across devices. Collaborated with designers to implement a clean, intuitive interface and integrated essential features such as course listings, enrollment forms, and contact options.",
-    stack: [
-      "React",
-      "TypeScript",
-      "JavaScript",
-      "Tailwind",
-      "WordPress",
-      "CSS",
-      "HTML",
-      "Git",
-      "Figma",
-      "Node.js",
-    ],
-  },
+
   {
     id: nanoid(),
     role: "Frontend Developer",

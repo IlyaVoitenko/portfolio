@@ -21,13 +21,11 @@ const Main = () => {
         <Animation>
           <Section id="about" title="About">
             <p className={styles.paragraph}>
-              Versatile frontend and full-stack developer with solid experience
-              in building powerful, secure and user- oriented applications.
-              In-depth knowledge of React, Redux toolkit and other full stack
-              technologies. I place great value on a seamless user experience
-              while optimizing for speed and reliability. Experienced in working
-              with interdisciplinary teams to ensure that each project meets
-              both technical standards and business objectives.
+              Frontend Engineer specializing in React, Next.js and TypeScript
+              with experience building scalable web applications and API-driven
+              interfaces. Strong focus on performance optimization, clean
+              architecture and modern frontend tooling. Bachelor’s degree
+              (German equivalent)
             </p>
           </Section>
         </Animation>
